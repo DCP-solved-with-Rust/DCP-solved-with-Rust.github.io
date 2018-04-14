@@ -7,7 +7,7 @@ interview prep service that sends an interview coding problem every day"
 
 [The *DCP solved with Rust* organization](https://github.com/DCP-solved-with-Rust)
 holds solutions in Rust to some of the daily coding problems. The ultimate goal
-of the DCP solved with Rust organization is to solve all of the problems, and
+of the DCP solved with Rust organization is to solve all of the DCP problems, and
 to do so in a way that satisfies all conditions in the given problems. Additionally,
 to have all solutions include automated tests corresponding to the example inputs
 and outputs given in the problems.
