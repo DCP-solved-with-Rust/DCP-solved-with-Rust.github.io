@@ -13,18 +13,18 @@ all solutions include automated tests corresponding to the
 example inputs and outputs given in the problems.
 
 > Hi there,
-> 
+>
 > Thanks for signing up to Daily Coding Problem! I hope you enjoy the problems we
 > send.
-> 
+>
 > I'd like to take just a few moments to share with you what to expect from Daily
 > Coding Problem, and offer a few suggestions for how you can make the most of it.
-> 
+>
 > We'll be sending you one programming interview question every day that was asked
 > recently by top tech companies. Each question should take under one hour to
 > solve, including actual working code and some tests. Here are a few suggestions
 > to get the most out of the problems:
-> 
+>
 >  * Actually do the problems. This means writing the code and making it run.
 >    Getting stuck can be frustrating, but it's natural and the best way to learn.
 >  * Time yourself. Candidates who solve interview problems quickly are more
@@ -37,13 +37,13 @@ example inputs and outputs given in the problems.
 >    each day's problem.
 >  * Forward a problem to people you think might enjoy it, and discuss potential
 >    solutions with them.
-> 
+>
 > Finally, feel free to send us any feedback or suggestions! You can email us
 > anytime at this email. Also, let us know if Daily Coding Problem helped you out
 > in any way — we'd love to hear about it.
-> 
+>
 > We will send your first problem at 9:00AM PST. Best,
-> 
+>
 > Lawrence
 
 ## List of problems
