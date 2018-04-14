@@ -48,7 +48,7 @@ example inputs and outputs given in the problems.
 
 ## List of problems
 
-| Problem | Brief description | Solved? |
-| ------- | ----------------- | ------- |
-| Problem #1 | Do two numbers in a given list sum to a given number k? | [Yes](https://github.com/DCP-solved-with-Rust/dcp_00001), 2018-04-12 |
-| Problem #2 | Product of numbers in array except at position i. | [Yes](https://github.com/DCP-solved-with-Rust/day_00002), 2018-04-12 |
+| Problem | Brief description | Solved? | Build status |
+| ------- | ----------------- | ------- | ------------ |
+| Problem #1 | Do two numbers in a given list sum to a given number k? | [Yes](https://github.com/DCP-solved-with-Rust/dcp_00001), 2018-04-12 | [![Build Status](https://travis-ci.org/DCP-solved-with-Rust/dcp_00001.svg?branch=master)](https://travis-ci.org/DCP-solved-with-Rust/dcp_00001?branch=master) |
+| Problem #2 | Product of numbers in array except at position i. | [Yes](https://github.com/DCP-solved-with-Rust/day_00002), 2018-04-12 | [![Build Status](https://travis-ci.org/DCP-solved-with-Rust/dcp_00002.svg?branch=master)](https://travis-ci.org/DCP-solved-with-Rust/dcp_00002?branch=master) |
