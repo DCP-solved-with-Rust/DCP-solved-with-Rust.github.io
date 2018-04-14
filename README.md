@@ -1,4 +1,4 @@
-# Daily Coding Problems
+# DCP solved with Rust
 
 [Daily Coding Problem](https://www.dailycodingproblem.com/) is "a technical
 interview prep service that sends an interview coding problem every day"
