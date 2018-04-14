@@ -15,8 +15,8 @@ example inputs and outputs given in the problems.
 Would you like to take a shot at this yourself? Go to
 [the DCP website](https://www.dailycodingproblem.com/) and subscribe to
 Daily Coding Problem (it's free). After you have received your first coding
-problem from the DCP and you've taken a shot at solving it yourself, come back
-here and compare your solution to mine :)
+problem from the DCP and you've got a solution, come back here and compare
+your solution to mine :)
 
 > Hi there,
 >
