@@ -5,12 +5,12 @@ interview prep service that sends an interview coding problem every day"
 (according to the founders of DCP in
 [an interview with Indie Hackers](https://www.indiehackers.com/interview/a2b57cca87)).
 
-The "DCP solved with Rust" organization holds solutions in Rust
-to some of the daily coding problems. The goal is to ultimately
-solve all of the problems, and to do so in a way that satisfy
-all conditions in the given problems. Additionally, to have
-all solutions include automated tests corresponding to the
-example inputs and outputs given in the problems.
+[The *DCP solved with Rust* organization](https://github.com/DCP-solved-with-Rust)
+holds solutions in Rust to some of the daily coding problems. The goal is to
+ultimately solve all of the problems, and to do so in a way that satisfy all
+conditions in the given problems. Additionally, to have all solutions include
+automated tests corresponding to the example inputs and outputs given in
+the problems.
 
 Would you like to take a shot at this yourself? Go to
 [the DCP website](https://www.dailycodingproblem.com/) and subscribe to
