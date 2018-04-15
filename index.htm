@@ -135,7 +135,17 @@ fetch('https://api.github.com/users/DCP-solved-with-Rust/repos')
 			// Number of open issues
 			const niss_cell = row.insertCell(2);
 			const niss_text = document.createTextNode(repo.open_issues_count);
-			niss_cell.appendChild(niss_text);
+			if (repo.open_issues_count)
+			{
+				const niss_link = document.createElement('a');
+				niss_link.setAttribute('href', `https://github.com/DCP-solved-with-Rust/${repo.name}/issues`);
+				niss_link.appendChild(niss_text);
+				niss_cell.appendChild(niss_link);
+			}
+			else
+			{
+				niss_cell.appendChild(niss_text);
+			}
 
 			// Build status
 			const bsta_cell = row.insertCell(3);
