@@ -124,7 +124,7 @@ fetch('https://api.github.com/users/DCP-solved-with-Rust/repos')
 			// Problem number
 			const prob_cell = row.insertCell(0);
 			const prob_link = document.createElement('a');
-			prob_link.setAttribute('href', `https://github.com/DCP-solved-with-Rust/${repo.name}#readme`);
+			prob_link.setAttribute('href', `https://github.com/DCP-solved-with-Rust/${repo.name}`);
 			const prob_text = document.createTextNode('Problem #' + dcp_num);
 			prob_link.appendChild(prob_text);
 			prob_cell.appendChild(prob_link);
