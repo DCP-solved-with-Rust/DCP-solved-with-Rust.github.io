@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang=en>
+<meta charset="utf-8" />
+<title>DCP Solved with Rust</title>
+<link rel=stylesheet href=assets/css/style.css>
+<style>
+table#solved-problems
+{
+  display: table;
+}
+</style>
+
+<header class=page-header>
+<h1 class=project-name>DCP solved with Rust</h1>
+<h2 class=project-tagline>Daily Coding Problem (DCP) solutions written in Rust</h2>
+</header>
+
+<div class=main-content>
+<section id=intro>
+<p><a href=https://www.dailycodingproblem.com/>Daily Coding Problem</a> is "a technical
+interview prep service that sends an interview coding problem every day"
+(according to the founders of DCP in
+<a href=https://www.indiehackers.com/interview/a2b57cca87>an interview with Indie Hackers</a>).
+
+<p><a href=https://github.com/DCP-solved-with-Rust>The <em>DCP solved with Rust</em> organization</a>
+holds <a href=#list-of-solved-problems>solutions in Rust</a> to some of the
+daily coding problems. The ultimate goal of the DCP solved with Rust
+organization is to solve all of the DCP problems, and to do so in a way that
+satisfies all conditions in the given problems. Additionally, to have all
+solutions include automated tests corresponding to the example inputs
+and outputs given in the problems.
+
+<p>Would you like to take a shot at this yourself? Go to
+<a href=https://www.dailycodingproblem.com/>the DCP website</a> and subscribe to
+Daily Coding Problem (it's free). After you have received your first coding
+problem from the DCP and you've got a solution, come back here and compare
+your solution to mine :)
+
+<blockquote>
+<p>Hi there,
+<p>Thanks for signing up to Daily Coding Problem! I hope you enjoy
+the problems we send.
+<p>I'd like to take just a few moments to share with you what to expect from
+Daily Coding Problem, and offer a few suggestions for how you can make
+the most of it.
+<p>We'll be sending you one programming interview question every day that was
+asked recently by top tech companies. Each question should take under one hour
+to solve, including actual working code and some tests. Here are a few
+suggestions to get the most out of the problems:</p>
+<ul>
+<li>Actually do the problems. This means writing the code and making it run.
+    Getting stuck can be frustrating, but it's natural and the best way to learn.
+<li>Time yourself. Candidates who solve interview problems quickly are more
+    likely to cinch the interview.
+<li>Think of edge cases and run your code through them. Some good edge cases
+    might be the empty case, weird inputs, or a really large input.
+<li>Once you've made sure your code passes all your tests, try explaining your
+    algorithm to a colleague or friend.
+<li>You could also start a mini-discussion group with your friends to discuss
+    each day's problem.
+<li>Forward a problem to people you think might enjoy it, and discuss potential
+    solutions with them.
+</ul>
+<p>Finally, feel free to send us any feedback or suggestions! You can email us
+anytime at this email. Also, let us know if Daily Coding Problem helped you out
+in any way — we'd love to hear about it.
+<p>We will send your first problem at 9:00AM PST. Best,
+<p>Lawrence
+</blockquote>
+</section>
+
+<section id=list-of-solved-problems>
+<h2>List of solved problems</h2>
+
+<p>Please note: The table below is populated with JavaScript that is making
+use of ECMAScript 6 features. If the table fails to load because you are using
+an old browser, please accept my apologies and
+<a href=https://github.com/DCP-solved-with-Rust>go browse
+the DCP solved with Rust organization page</a> instead.
+
+<table id=solved-problems>
+<thead><tr><th>Problem</th><th>Brief description</th><th><abbr title='Number of open issues'>#!</abbr></th><th>Build status</th></tr></thead>
+<tbody></tbody>
+</table>
+</section>
+
+<footer class=site-footer>
+<p>Theme: <a href=https://github.com/pages-themes/cayman>Cayman</a>
+</footer>
+</div>
+
+<script>
+/*
+ * Copyright (c) 2018 Erik Nordstrøm <erik@nordstroem.no>
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
+
+fetch('https://api.github.com/users/DCP-solved-with-Rust/repos')
+.then(r => r.json()).then(repos =>
+{
+	const tbod = document.getElementById('solved-problems').getElementsByTagName('tbody')[0];
+
+	for (let repo of repos)
+	{
+		if (repo.name.match(/^dcp_[0-9]{5}$/))
+		{
+			dcp_num = parseInt(repo.name.match(/[0-9]{5}$/)[0]);
+
+			const row = tbod.insertRow(tbod.rows.length);
+
+			// Problem number
+			const prob_cell = row.insertCell(0);
+			const prob_text = document.createTextNode('Problem #' + dcp_num);
+			prob_cell.appendChild(prob_text);
+
+			// Brief description
+			const desc_cell = row.insertCell(1);
+			const desc_text = document.createTextNode(repo.description);
+			desc_cell.appendChild(desc_text);
+
+			// Number of open issues
+			const niss_cell = row.insertCell(2);
+			const niss_text = document.createTextNode(repo.open_issues_count);
+			niss_cell.appendChild(niss_text);
+
+			// Build status
+			const bsta_cell = row.insertCell(3);
+			const bsta_link = document.createElement('a');
+			bsta_link.setAttribute('href', `https://travis-ci.org/DCP-solved-with-Rust/${repo.name}?branch=master`);
+			const bsta_img = document.createElement('img');
+			bsta_img.setAttribute('src', `https://travis-ci.org/DCP-solved-with-Rust/${repo.name}.svg?branch=master`);
+			bsta_img.setAttribute('alt', 'Build Status');
+			bsta_link.appendChild(bsta_img);
+			bsta_cell.appendChild(bsta_link);
+		}
+	}
+}
+).catch(e => console.log("Booo"));
+</script>
